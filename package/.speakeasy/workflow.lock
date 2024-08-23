@@ -1,0 +1,27 @@
+speakeasyVersion: 1.377.1
+sources:
+    petstore-oas:
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:edd77759c73b2b5e0de4ed5113c3dc9c1ee658ef494dbdfa7b7e02a98f866dec
+        sourceBlobDigest: sha256:aa568201beee7a94918cf998a239a49037428956d61d431dbbd31d13d5a9ed65
+        tags:
+            - latest
+targets:
+    petstore:
+        source: petstore-oas
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:edd77759c73b2b5e0de4ed5113c3dc9c1ee658ef494dbdfa7b7e02a98f866dec
+        sourceBlobDigest: sha256:aa568201beee7a94918cf998a239a49037428956d61d431dbbd31d13d5a9ed65
+        outLocation: /Users/ryanalbert/test_nested_repo/package
+workflow:
+    workflowVersion: 1.0.0
+    sources:
+        petstore-oas:
+            inputs:
+                - location: openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas
+    targets:
+        petstore:
+            target: typescript
+            source: petstore-oas
