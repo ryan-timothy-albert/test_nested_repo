@@ -1,20 +1,22 @@
-speakeasyVersion: 1.377.1
+speakeasyVersion: 1.378.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:edd77759c73b2b5e0de4ed5113c3dc9c1ee658ef494dbdfa7b7e02a98f866dec
-        sourceBlobDigest: sha256:aa568201beee7a94918cf998a239a49037428956d61d431dbbd31d13d5a9ed65
+        sourceRevisionDigest: sha256:150ee16c1996c6deeec91d4c0e90e6e16f25bec3f9251ba40cfd9b6fa57a5d7c
+        sourceBlobDigest: sha256:9480cf4cfe4bec2b7aebbca1acc70012d890dc26bf83a293e6f9e682952509fb
         tags:
             - latest
+            - main
 targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:edd77759c73b2b5e0de4ed5113c3dc9c1ee658ef494dbdfa7b7e02a98f866dec
-        sourceBlobDigest: sha256:aa568201beee7a94918cf998a239a49037428956d61d431dbbd31d13d5a9ed65
-        outLocation: /Users/ryanalbert/test_nested_repo/package
+        sourceRevisionDigest: sha256:150ee16c1996c6deeec91d4c0e90e6e16f25bec3f9251ba40cfd9b6fa57a5d7c
+        sourceBlobDigest: sha256:9480cf4cfe4bec2b7aebbca1acc70012d890dc26bf83a293e6f9e682952509fb
+        outLocation: /github/workspace/repo/package
 workflow:
     workflowVersion: 1.0.0
+    speakeasyVersion: latest
     sources:
         petstore-oas:
             inputs:

@@ -1,9 +1,14 @@
 {
   "name": "petstore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Speakeasy",
   "main": "./index.js",
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryan-timothy-albert/test_nested_repo.git",
+    "directory": "package"
+  },
   "scripts": {
     "lint": "eslint --max-warnings=0 src",
     "build": "tsc",
