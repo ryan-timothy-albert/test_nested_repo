@@ -2,7 +2,7 @@ speakeasyVersion: 1.378.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:5643c110c31940f8b2479617ffea904103b16d60394041fbfb15b7cabb93a6ff
+        sourceRevisionDigest: sha256:b49d6adb32fea5d5acb70aa5f84d16b8a020a565bf1020dbb7d7759290e0300c
         sourceBlobDigest: sha256:9480cf4cfe4bec2b7aebbca1acc70012d890dc26bf83a293e6f9e682952509fb
         tags:
             - latest
@@ -11,7 +11,7 @@ targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:5643c110c31940f8b2479617ffea904103b16d60394041fbfb15b7cabb93a6ff
+        sourceRevisionDigest: sha256:b49d6adb32fea5d5acb70aa5f84d16b8a020a565bf1020dbb7d7759290e0300c
         sourceBlobDigest: sha256:9480cf4cfe4bec2b7aebbca1acc70012d890dc26bf83a293e6f9e682952509fb
         outLocation: /github/workspace/repo/package
 workflow:

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { LoginUserRequest } from "petstore/models/operations";
+import { LoginUserRequest } from "ryan-test-nested/models/operations";
 
 let value: LoginUserRequest = {};
 ```

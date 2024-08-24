@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { User } from "petstore/models/components";
+import { User } from "ryan-test-nested/models/components";
 
 let value: User = {
     id: 10,

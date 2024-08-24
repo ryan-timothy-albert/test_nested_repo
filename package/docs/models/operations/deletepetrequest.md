@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeletePetRequest } from "petstore/models/operations";
+import { DeletePetRequest } from "ryan-test-nested/models/operations";
 
 let value: DeletePetRequest = {
     petId: 844266,
