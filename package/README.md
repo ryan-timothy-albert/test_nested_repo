@@ -22,25 +22,25 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 ### NPM
 
 ```bash
-npm add petstore
+npm add ryan-test-nested
 ```
 
 ### PNPM
 
 ```bash
-pnpm add petstore
+pnpm add ryan-test-nested
 ```
 
 ### Bun
 
 ```bash
-bun add petstore
+bun add ryan-test-nested
 ```
 
 ### Yarn
 
 ```bash
-yarn add petstore zod
+yarn add ryan-test-nested zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
@@ -59,7 +59,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-test-nested";
 
 const petstore = new Petstore({
     apiKey: "<YOUR_API_KEY_HERE>",
@@ -169,7 +169,7 @@ Certain SDK methods accept files as part of a multi-part request. It is possible
 > - **Node.js v18:** A file stream can be created using the `fileFrom` helper from [`fetch-blob/from.js`](https://www.npmjs.com/package/fetch-blob).
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-test-nested";
 
 const petstore = new Petstore({
     apiKey: "<YOUR_API_KEY_HERE>",
@@ -196,7 +196,7 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-test-nested";
 
 const petstore = new Petstore({
     apiKey: "<YOUR_API_KEY_HERE>",
@@ -237,7 +237,7 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-test-nested";
 
 const petstore = new Petstore({
     retryConfig: {
@@ -289,8 +289,8 @@ Validation errors can also occur when either method arguments or data returned f
 
 
 ```typescript
-import { Petstore } from "petstore";
-import { SDKValidationError } from "petstore/models/errors";
+import { Petstore } from "ryan-test-nested";
+import { SDKValidationError } from "ryan-test-nested/models/errors";
 
 const petstore = new Petstore({
     apiKey: "<YOUR_API_KEY_HERE>",
@@ -356,7 +356,7 @@ You can override the default server globally by passing a server index to the `s
 | 0 | `https://{environment}.petstore.io` | `environment` (default is `prod`) |
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-test-nested";
 
 const petstore = new Petstore({
     serverIdx: 0,
@@ -392,7 +392,7 @@ Some of the server options above contain variables. If you want to set the value
 The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-test-nested";
 
 const petstore = new Petstore({
     serverURL: "https://{environment}.petstore.io",
@@ -437,8 +437,8 @@ custom header and a timeout to requests and how to use the `"requestError"` hook
 to log errors:
 
 ```typescript
-import { Petstore } from "petstore";
-import { HTTPClient } from "petstore/lib/http";
+import { Petstore } from "ryan-test-nested";
+import { HTTPClient } from "ryan-test-nested/lib/http";
 
 const httpClient = new HTTPClient({
   // fetcher takes a function that has the same signature as native `fetch`.
@@ -481,7 +481,7 @@ This SDK supports the following security scheme globally:
 
 To authenticate with the API the `apiKey` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-test-nested";
 
 const petstore = new Petstore({
     apiKey: "<YOUR_API_KEY_HERE>",
@@ -518,7 +518,7 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-test-nested";
 
 const sdk = new Petstore({ debugLogger: console });
 ```

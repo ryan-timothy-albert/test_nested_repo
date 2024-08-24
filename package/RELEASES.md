@@ -51,3 +51,13 @@ Based on:
 - [typescript v0.0.7] package
 ### Releases
 - [NPM v0.0.7] https://www.npmjs.com/package/petstore/v/0.0.7 - package
+
+## 2024-08-24 21:30:51
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.378.0 (2.404.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v0.0.8] package
+### Releases
+- [NPM v0.0.8] https://www.npmjs.com/package/ryan-test-nested/v/0.0.8 - package

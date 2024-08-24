@@ -1,8 +1,8 @@
 
 
 {
-  "name": "petstore",
-  "version": "0.0.7",
+  "name": "ryan-test-nested",
+  "version": "0.0.8",
   "exports": {
     ".": "./src/index.ts",    
     "./models/errors": "./src/models/errors/index.ts",    

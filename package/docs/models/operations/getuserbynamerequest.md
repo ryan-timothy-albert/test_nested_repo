@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetUserByNameRequest } from "petstore/models/operations";
+import { GetUserByNameRequest } from "ryan-test-nested/models/operations";
 
 let value: GetUserByNameRequest = {
     username: "Roselyn_Kassulke",

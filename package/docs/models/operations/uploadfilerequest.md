@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UploadFileRequest } from "petstore/models/operations";
+import { UploadFileRequest } from "ryan-test-nested/models/operations";
 
 let value: UploadFileRequest = {
     petId: 602763,
