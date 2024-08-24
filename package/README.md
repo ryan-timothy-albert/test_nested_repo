@@ -22,25 +22,25 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 ### NPM
 
 ```bash
-npm add https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package
+npm add petstore
 ```
 
 ### PNPM
 
 ```bash
-pnpm add https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package
+pnpm add petstore
 ```
 
 ### Bun
 
 ```bash
-bun add https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package
+bun add petstore
 ```
 
 ### Yarn
 
 ```bash
-yarn add https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package zod
+yarn add petstore zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.

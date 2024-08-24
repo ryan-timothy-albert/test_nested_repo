@@ -2,7 +2,7 @@ speakeasyVersion: 1.378.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:5482fc0cb51e5e710c38063dc2d25a42286ae51dc7bdf574c65a3976872d019b
+        sourceRevisionDigest: sha256:212313df7400e9f7fdc1cd8afe0d15fcf586c52783629ae64f4ef987e3d3224e
         sourceBlobDigest: sha256:9480cf4cfe4bec2b7aebbca1acc70012d890dc26bf83a293e6f9e682952509fb
         tags:
             - latest
@@ -11,7 +11,7 @@ targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:5482fc0cb51e5e710c38063dc2d25a42286ae51dc7bdf574c65a3976872d019b
+        sourceRevisionDigest: sha256:212313df7400e9f7fdc1cd8afe0d15fcf586c52783629ae64f4ef987e3d3224e
         sourceBlobDigest: sha256:9480cf4cfe4bec2b7aebbca1acc70012d890dc26bf83a293e6f9e682952509fb
         outLocation: /github/workspace/repo/package
 workflow:
@@ -27,3 +27,6 @@ workflow:
         petstore:
             target: typescript
             source: petstore-oas
+            publish:
+                npm:
+                    token: $npm_token
