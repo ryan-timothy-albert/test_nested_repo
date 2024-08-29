@@ -3,15 +3,6 @@ info:
   title: Overlay after-overlay-swagger.json => before-overlay-swagger.json
   version: 0.0.0
 actions:
-  - target: $..*["application/octet-stream"]["schema"]["format"]
-    update: "binary"
-  # - target: $["paths"]["/logs/v1/{appId}/process/{processId}"]["get"]["responses"]["200"]["content"]["application/octet-stream"]["schema"]["format"]
-  #   update: "byte"
-  # - target: $["paths"]["/logs/v1/{appId}/process/{processId}/download"]["get"]["responses"]["200"]["content"]["application/octet-stream"]["schema"]["format"]
-  #   update: "byte"
-  # - target: $["paths"]["/logs/v1/{appId}/deployment/{deploymentId}"]["get"]["responses"]["200"]["content"]["application/octet-stream"]["schema"]["format"]
-  #   update: "byte"
-  # - target: $["paths"]["/builds/v3/builds/{buildId}/run"]["post"]["responses"]["200"]["content"]["application/octet-stream"]["schema"]["format"]
-  #   update: "byte"
-  # - target: $["paths"]["/builds/v2/{appId}/run/{buildId}"]["post"]["responses"]["200"]["content"]["application/octet-stream"]["schema"]["format"]
-  #   update: "byte"
+  - target: $..*["application/octet-stream"].schema
+    update:
+      "format": "binary"
