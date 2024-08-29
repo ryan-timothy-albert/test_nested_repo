@@ -7,7 +7,7 @@ permissions:
 "on":
   push:
     branches:
-      - test_non_main_branch
+      - main
     paths:
       - package/sdk/RELEASES.md
 jobs:
