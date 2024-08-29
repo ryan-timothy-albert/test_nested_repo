@@ -7,12 +7,6 @@ sources:
         overlays:
             - location: overlay.yml
         output: test.json
-#         registry:
-#             location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas
-# targets:
-#     petstore:
-#         target: typescript
-#         source: petstore-oas
-#         publish:
-#             npm:
-#                 token: $npm_token
+        registry:
+            location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas
+targets: {}
