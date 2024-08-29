@@ -19,9 +19,9 @@ specific category of applications.
 ## Example
 
 ```typescript
-import { PetstoreCore } from "total-test/core.js";
-import { petsListPets } from "total-test/funcs/petsListPets.js";
-import { SDKValidationError } from "total-test/models/errors/sdkvalidationerror.js";
+import { PetstoreCore } from "ryan-total-test-act/core.js";
+import { petsListPets } from "ryan-total-test-act/funcs/petsListPets.js";
+import { SDKValidationError } from "ryan-total-test-act/models/errors/sdkvalidationerror.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -24,25 +24,25 @@ The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https
 ### NPM
 
 ```bash
-npm add total-test
+npm add ryan-total-test-act
 ```
 
 ### PNPM
 
 ```bash
-pnpm add total-test
+pnpm add ryan-total-test-act
 ```
 
 ### Bun
 
 ```bash
-bun add total-test
+bun add ryan-total-test-act
 ```
 
 ### Yarn
 
 ```bash
-yarn add total-test zod
+yarn add ryan-total-test-act zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
@@ -61,7 +61,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const petstore = new Petstore();
 
@@ -117,7 +117,7 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const petstore = new Petstore();
 
@@ -148,7 +148,7 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const petstore = new Petstore({
     retryConfig: {
@@ -188,8 +188,8 @@ Validation errors can also occur when either method arguments or data returned f
 
 
 ```typescript
-import { Petstore } from "total-test";
-import { SDKValidationError } from "total-test/models/errors";
+import { Petstore } from "ryan-total-test-act";
+import { SDKValidationError } from "ryan-total-test-act/models/errors";
 
 const petstore = new Petstore();
 
@@ -233,7 +233,7 @@ You can override the default server globally by passing a server index to the `s
 | 0 | `http://petstore.swagger.io/v1` | None |
 
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const petstore = new Petstore({
     serverIdx: 0,
@@ -256,7 +256,7 @@ run();
 The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
 
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const petstore = new Petstore({
     serverURL: "http://petstore.swagger.io/v1",
@@ -292,8 +292,8 @@ custom header and a timeout to requests and how to use the `"requestError"` hook
 to log errors:
 
 ```typescript
-import { Petstore } from "total-test";
-import { HTTPClient } from "total-test/lib/http";
+import { Petstore } from "ryan-total-test-act";
+import { HTTPClient } from "ryan-total-test-act/lib/http";
 
 const httpClient = new HTTPClient({
   // fetcher takes a function that has the same signature as native `fetch`.
@@ -334,7 +334,7 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const sdk = new Petstore({ debugLogger: console });
 ```

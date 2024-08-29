@@ -1,7 +1,7 @@
 {
-  "name": "total-test",
-  "version": "0.0.5",
-  "author": "ryann-timothy-albert",
+  "name": "ryan-total-test-act",
+  "version": "0.0.6",
+  "author": "ryan-timothy-albert",
   "main": "./index.js",
   "sideEffects": false,
   "repository": {

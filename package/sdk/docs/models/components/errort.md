@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ErrorT } from "total-test/models/components";
+import { ErrorT } from "ryan-total-test-act/models/components";
 
 let value: ErrorT = {
     code: 847252,
