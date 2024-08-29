@@ -19,6 +19,8 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
+The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [bun](https://bun.sh/) or [yarn](https://classic.yarnpkg.com/en/) package managers.
+
 ### NPM
 
 ```bash
@@ -337,6 +339,27 @@ import { Petstore } from "total-test";
 const sdk = new Petstore({ debugLogger: console });
 ```
 <!-- End Debugging [debug] -->
+
+<!-- Start Summary [summary] -->
+## Summary
+
+
+<!-- End Summary [summary] -->
+
+<!-- Start Table of Contents [toc] -->
+## Table of Contents
+
+* [SDK Installation](#sdk-installation)
+* [Requirements](#requirements)
+* [SDK Example Usage](#sdk-example-usage)
+* [Available Resources and Operations](#available-resources-and-operations)
+* [Standalone functions](#standalone-functions)
+* [Retries](#retries)
+* [Error Handling](#error-handling)
+* [Server Selection](#server-selection)
+* [Custom HTTP Client](#custom-http-client)
+* [Debugging](#debugging)
+<!-- End Table of Contents [toc] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 
