@@ -9,10 +9,10 @@ permissions:
     branches:
       - main
     paths:
-      - package/RELEASES.md
+      - package/sdk/RELEASES.md
 jobs:
   publish:
-    uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15.24.0
+    uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15
     with:
       working_directory: package
     secrets:
