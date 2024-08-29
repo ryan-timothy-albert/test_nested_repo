@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListPetsResponseResult } from "total-test/models/operations";
+import { ListPetsResponseResult } from "ryan-total-test-act/models/operations";
 
 let value: ListPetsResponseResult = {
     code: 592845,

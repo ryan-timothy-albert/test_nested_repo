@@ -16,7 +16,7 @@ List all pets
 ### Example Usage
 
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const petstore = new Petstore();
 
@@ -35,8 +35,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "total-test/core.js";
-import { petsListPets } from "total-test/funcs/petsListPets.js";
+import { PetstoreCore } from "ryan-total-test-act/core.js";
+import { petsListPets } from "ryan-total-test-act/funcs/petsListPets.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -85,7 +85,7 @@ Create a pet
 ### Example Usage
 
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const petstore = new Petstore();
 
@@ -107,8 +107,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "total-test/core.js";
-import { petsCreatePets } from "total-test/funcs/petsCreatePets.js";
+import { PetstoreCore } from "ryan-total-test-act/core.js";
+import { petsCreatePets } from "ryan-total-test-act/funcs/petsCreatePets.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -160,7 +160,7 @@ Info for a specific pet
 ### Example Usage
 
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const petstore = new Petstore();
 
@@ -181,8 +181,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "total-test/core.js";
-import { petsShowPetById } from "total-test/funcs/petsShowPetById.js";
+import { PetstoreCore } from "ryan-total-test-act/core.js";
+import { petsShowPetById } from "ryan-total-test-act/funcs/petsShowPetById.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

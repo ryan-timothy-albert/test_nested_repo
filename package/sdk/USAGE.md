@@ -1,6 +1,6 @@
 <!-- Start SDK Example Usage [usage] -->
 ```typescript
-import { Petstore } from "total-test";
+import { Petstore } from "ryan-total-test-act";
 
 const petstore = new Petstore();
 
