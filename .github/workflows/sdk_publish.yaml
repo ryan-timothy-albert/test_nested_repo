@@ -5,16 +5,18 @@ permissions:
   pull-requests: write
   statuses: write
 "on":
-  push:
-    branches:
-      - main
-    paths:
-      - package/sdk/RELEASES.md
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - package/sdk/RELEASES.md
+    workflow_dispatch:
 jobs:
   publish:
-    uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15
+    uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15.31.0
     with:
       working_directory: package
+      target: fijof
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
