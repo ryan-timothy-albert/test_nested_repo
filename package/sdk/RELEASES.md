@@ -79,3 +79,13 @@ Based on:
 - [typescript v0.1.1] package/sdk
 ### Releases
 - [NPM v0.1.1] https://www.npmjs.com/package/ryan-total-test-act/v/0.1.1 - package/sdk
+
+## 2024-10-09 04:31:40
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.413.0 (2.436.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v0.1.2] package/sdk
+### Releases
+- [NPM v0.1.2] https://www.npmjs.com/package/ryan-total-test-act/v/0.1.2 - package/sdk
