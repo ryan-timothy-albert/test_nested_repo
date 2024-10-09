@@ -10,13 +10,13 @@ permissions:
   #     - main
   #   paths:
   #     - package/sdk/RELEASES.md
-    workflow_dispatch:
+  workflow_dispatch:
 jobs:
   publish:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15.31.0
     with:
       working_directory: package
-      target: fijof
+      target: petstore
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
