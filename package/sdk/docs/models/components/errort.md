@@ -6,8 +6,8 @@
 import { ErrorT } from "ryan-total-test-act/models/components";
 
 let value: ErrorT = {
-    code: 847252,
-    message: "<value>",
+  code: 891773,
+  message: "<value>",
 };
 ```
 
