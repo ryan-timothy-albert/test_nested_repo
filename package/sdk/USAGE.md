@@ -5,10 +5,10 @@ import { Petstore } from "ryan-total-test-act";
 const petstore = new Petstore();
 
 async function run() {
-    const result = await petstore.pets.listPets({});
+  const result = await petstore.pets.listPets({});
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
