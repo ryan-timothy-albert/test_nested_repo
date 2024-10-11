@@ -11,6 +11,6 @@ targets:
         target: typescript
         source: petstore-oas
         output: sdk
-        # publish:
-        #     npm:
-        #         token: $npm_token
+        publish:
+            npm:
+                token: $npm_token
