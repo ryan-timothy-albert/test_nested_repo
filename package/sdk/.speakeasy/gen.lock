@@ -3,10 +3,10 @@ id: 61baf600-f5ef-40e7-a8ac-60a427fe2b6e
 management:
   docChecksum: 1bdb7a6f8bf3995d4b40475228403253
   docVersion: 1.0.0
-  speakeasyVersion: 1.423.1
-  generationVersion: 2.442.11
-  releaseVersion: 0.2.0
-  configChecksum: db55bde60618a1c7d8cf48dbb3960d0b
+  speakeasyVersion: 1.423.5
+  generationVersion: 2.445.1
+  releaseVersion: 0.2.1
+  configChecksum: 242f6619e57abb63b8d3a37bbb35e3f1
   repoURL: https://github.com/ryan-timothy-albert/test_nested_repo.git
   repoSubDirectory: package/sdk
   installationURL: https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package/sdk
