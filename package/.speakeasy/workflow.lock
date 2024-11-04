@@ -1,9 +1,9 @@
-speakeasyVersion: 1.423.1
+speakeasyVersion: 1.424.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:1d84ca8d8eaef5bafd4aa63a318f23f173d0cb37398ab47fb05e4287b14d5b7e
-        sourceBlobDigest: sha256:ea345c5fff9396f9d26f06eb40051420eb8f4754000693080ce1ac6f4d44a179
+        sourceRevisionDigest: sha256:b0f44cb22f1c6aec1bed1c781d21a6c41e8b0f3fccb116f229e782a9656ed921
+        sourceBlobDigest: sha256:69a3ed9123054331820acb44011f58db5480e6216f22616491d90fd743235b8b
         tags:
             - latest
             - main
@@ -11,15 +11,15 @@ targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:1d84ca8d8eaef5bafd4aa63a318f23f173d0cb37398ab47fb05e4287b14d5b7e
-        sourceBlobDigest: sha256:ea345c5fff9396f9d26f06eb40051420eb8f4754000693080ce1ac6f4d44a179
+        sourceRevisionDigest: sha256:b0f44cb22f1c6aec1bed1c781d21a6c41e8b0f3fccb116f229e782a9656ed921
+        sourceBlobDigest: sha256:69a3ed9123054331820acb44011f58db5480e6216f22616491d90fd743235b8b
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         petstore-oas:
             inputs:
-                - location: https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.yaml
+                - location: https://raw.githubusercontent.com/OAI/OpenAPI-Specification/refs/heads/main/tests/v3.0/pass/petstore.yaml
             registry:
                 location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas
     targets:
