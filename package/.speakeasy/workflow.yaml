@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     petstore-oas:
         inputs:
-            - location: https://raw.githubusercontent.com/OAI/OpenAPI-Specification/refs/heads/main/tests/v3.0/pass/petstore.yaml
+            - location: ./openapi.yaml
         registry:
             location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas
 targets:
