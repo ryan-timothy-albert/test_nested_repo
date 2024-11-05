@@ -1,8 +1,8 @@
-speakeasyVersion: 1.424.0
+speakeasyVersion: 1.426.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:b0f44cb22f1c6aec1bed1c781d21a6c41e8b0f3fccb116f229e782a9656ed921
+        sourceRevisionDigest: sha256:9ea302cbda6299dcedd932befdb206c1235641c38b7452b3a2de0273010a0311
         sourceBlobDigest: sha256:69a3ed9123054331820acb44011f58db5480e6216f22616491d90fd743235b8b
         tags:
             - latest
@@ -11,7 +11,7 @@ targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:b0f44cb22f1c6aec1bed1c781d21a6c41e8b0f3fccb116f229e782a9656ed921
+        sourceRevisionDigest: sha256:9ea302cbda6299dcedd932befdb206c1235641c38b7452b3a2de0273010a0311
         sourceBlobDigest: sha256:69a3ed9123054331820acb44011f58db5480e6216f22616491d90fd743235b8b
 workflow:
     workflowVersion: 1.0.0
