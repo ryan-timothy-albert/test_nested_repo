@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 61baf600-f5ef-40e7-a8ac-60a427fe2b6e
 management:
-  docChecksum: 1bdb7a6f8bf3995d4b40475228403253
+  docChecksum: b7ed2616c25c0eafe5e9cd14d1075de7
   docVersion: 1.0.0
-  speakeasyVersion: 1.424.0
-  generationVersion: 2.445.1
-  releaseVersion: 0.2.1
-  configChecksum: 242f6619e57abb63b8d3a37bbb35e3f1
+  speakeasyVersion: 1.430.0
+  generationVersion: 2.449.0
+  releaseVersion: 0.3.0
+  configChecksum: c11f9b7b0fe1e5cd14886034ed4e9ee1
   repoURL: https://github.com/ryan-timothy-albert/test_nested_repo.git
   repoSubDirectory: package/sdk
   installationURL: https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package/sdk
@@ -14,15 +14,15 @@ management:
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.18.2
+    core: 3.18.3
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
-    envVarSecurityUsage: 0.1.1
+    envVarSecurityUsage: 0.1.2
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.4
     responseFormat: 0.2.3
     retries: 2.83.0
-    sdkHooks: 0.1.0
+    sdkHooks: 0.2.0
     tests: 0.7.0
 generatedFiles:
   - .devcontainer/README.md
@@ -48,7 +48,7 @@ generatedFiles:
   - jsr.json
   - package.json
   - src/core.ts
-  - src/funcs/petsCreatePets.ts
+  - src/funcs/petsCreatePetsMe.ts
   - src/funcs/petsListPets.ts
   - src/funcs/petsShowPetById.ts
   - src/hooks/hooks.ts
@@ -117,3 +117,10 @@ examples:
           application/json: {"id": 763078, "name": "<value>"}
         default:
           application/json: {"code": 743784, "message": "<value>"}
+  createPetsMe:
+    speakeasy-default-create-pets-me:
+      requestBody:
+        application/json: {"id": 413703, "name": "<value>"}
+      responses:
+        default:
+          application/json: {"code": 357040, "message": "<value>"}
