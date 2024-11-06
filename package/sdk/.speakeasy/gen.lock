@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 61baf600-f5ef-40e7-a8ac-60a427fe2b6e
 management:
-  docChecksum: b7ed2616c25c0eafe5e9cd14d1075de7
+  docChecksum: 496cb1f79258f02dfb2630d13f439c4a
   docVersion: 1.0.0
-  speakeasyVersion: 1.430.0
-  generationVersion: 2.449.0
-  releaseVersion: 0.3.0
-  configChecksum: c11f9b7b0fe1e5cd14886034ed4e9ee1
+  speakeasyVersion: 1.431.0
+  generationVersion: 2.451.0
+  releaseVersion: 0.3.1
+  configChecksum: 189609195af45d3c0cd42a82bfcddc2d
   repoURL: https://github.com/ryan-timothy-albert/test_nested_repo.git
   repoSubDirectory: package/sdk
   installationURL: https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package/sdk
@@ -48,7 +48,7 @@ generatedFiles:
   - jsr.json
   - package.json
   - src/core.ts
-  - src/funcs/petsCreatePetsMe.ts
+  - src/funcs/petsCreatePETER.ts
   - src/funcs/petsListPets.ts
   - src/funcs/petsShowPetById.ts
   - src/hooks/hooks.ts
@@ -124,3 +124,10 @@ examples:
       responses:
         default:
           application/json: {"code": 357040, "message": "<value>"}
+  createPETER:
+    speakeasy-default-create-PETER:
+      requestBody:
+        application/json: {"id": 434573, "name": "<value>"}
+      responses:
+        default:
+          application/json: {"code": 606749, "message": "<value>"}
