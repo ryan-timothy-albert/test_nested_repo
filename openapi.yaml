@@ -43,7 +43,7 @@ paths:
   /pets/{petId}:
     get:
       summary: Info for a specific pet
-      operationId: showPetById
+      operationId: showPetByIdsdfds
       tags:
         - pets
       parameters:
