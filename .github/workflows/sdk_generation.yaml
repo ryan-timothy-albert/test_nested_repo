@@ -24,6 +24,7 @@ jobs:
       mode: pr
       set_version: ${{ github.event.inputs.set_version }}
       working_directory: package
+      speakeasy_version: v1.430.0
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
