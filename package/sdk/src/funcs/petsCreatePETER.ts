@@ -23,7 +23,7 @@ import { Result } from "../types/fp.js";
 /**
  * Create a pet
  */
-export async function petsCreatePetsMe(
+export async function petsCreatePETER(
   client: PetstoreCore,
   request: components.Pet,
   options?: RequestOptions,
@@ -58,7 +58,7 @@ export async function petsCreatePetsMe(
   });
 
   const context = {
-    operationID: "createPetsMe",
+    operationID: "createPETER",
     oAuth2Scopes: [],
     securitySource: null,
     retryConfig: options?.retries
