@@ -87,7 +87,7 @@ run();
 
 * [listPets](docs/sdks/pets/README.md#listpets) - List all pets
 * [createPets](docs/sdks/pets/README.md#createpets) - Create a pet
-* [showPetById](docs/sdks/pets/README.md#showpetbyid) - Info for a specific pet
+* [show](docs/sdks/pets/README.md#show) - Info for a specific pet
 
 
 </details>
@@ -110,7 +110,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 - [`petsCreatePets`](docs/sdks/pets/README.md#createpets) - Create a pet
 - [`petsListPets`](docs/sdks/pets/README.md#listpets) - List all pets
-- [`petsShowPetById`](docs/sdks/pets/README.md#showpetbyid) - Info for a specific pet
+- [`petsShow`](docs/sdks/pets/README.md#show) - Info for a specific pet
 
 </details>
 <!-- End Standalone functions [standalone-funcs] -->
