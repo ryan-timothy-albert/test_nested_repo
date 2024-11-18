@@ -4,7 +4,7 @@
 
 import { petsCreatePets } from "../funcs/petsCreatePets.js";
 import { petsListPets } from "../funcs/petsListPets.js";
-import { petsShowPetById } from "../funcs/petsShowPetById.js";
+import { petsShow } from "../funcs/petsShow.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
 import * as operations from "../models/operations/index.js";
@@ -42,11 +42,11 @@ export class Pets extends ClientSDK {
   /**
    * Info for a specific pet
    */
-  async showPetById(
-    request: operations.ShowPetByIdRequest,
+  async show(
+    request: operations.ShowRequest,
     options?: RequestOptions,
-  ): Promise<operations.ShowPetByIdResponse> {
-    return unwrapAsync(petsShowPetById(
+  ): Promise<operations.ShowResponse> {
+    return unwrapAsync(petsShow(
       this,
       request,
       options,
