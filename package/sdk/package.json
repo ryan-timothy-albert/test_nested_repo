@@ -1,6 +1,6 @@
 {
   "name": "ryan-total-test-act",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "author": "ryan-timothy-albert",
   "main": "./index.js",
   "sideEffects": false,
