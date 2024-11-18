@@ -9,7 +9,7 @@ permissions:
     branches:
       - main
     paths:
-      - package/sdk/RELEASES.md
+      - package/sdk/.speakeasy/gen.lock
   workflow_dispatch: {}
 jobs:
   publish:
