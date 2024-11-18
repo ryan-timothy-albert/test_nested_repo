@@ -23,13 +23,13 @@ import { Result } from "../types/fp.js";
 /**
  * Info for a specific pet
  */
-export async function petsShowPetById(
+export async function petsShow(
   client: PetstoreCore,
-  request: operations.ShowPetByIdRequest,
+  request: operations.ShowRequest,
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.ShowPetByIdResponse,
+    operations.ShowResponse,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -41,7 +41,7 @@ export async function petsShowPetById(
 > {
   const parsed = safeParse(
     request,
-    (value) => operations.ShowPetByIdRequest$outboundSchema.parse(value),
+    (value) => operations.ShowRequest$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -64,8 +64,11 @@ export async function petsShowPetById(
   });
 
   const context = {
-    operationID: "showPetById",
+    operationID: "show",
     oAuth2Scopes: [],
+
+    resolvedSecurity: null,
+
     securitySource: null,
     retryConfig: options?.retries
       || client._options.retryConfig
@@ -97,7 +100,7 @@ export async function petsShowPetById(
   const response = doResult.value;
 
   const [result] = await M.match<
-    operations.ShowPetByIdResponse,
+    operations.ShowResponse,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -106,9 +109,9 @@ export async function petsShowPetById(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.ShowPetByIdResponse$inboundSchema),
+    M.json(200, operations.ShowResponse$inboundSchema),
     M.fail(["4XX", "5XX"]),
-    M.json("default", operations.ShowPetByIdResponse$inboundSchema),
+    M.json("default", operations.ShowResponse$inboundSchema),
   )(response);
   if (!result.ok) {
     return result;

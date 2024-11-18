@@ -1,11 +1,11 @@
-# ShowPetByIdRequest
+# ShowRequest
 
 ## Example Usage
 
 ```typescript
-import { ShowPetByIdRequest } from "ryan-total-test-act/models/operations";
+import { ShowRequest } from "ryan-total-test-act/models/operations";
 
-let value: ShowPetByIdRequest = {
+let value: ShowRequest = {
   petId: "<id>",
 };
 ```
