@@ -3,4 +3,4 @@
  */
 
 export * from "./listpets.js";
-export * from "./showpetbyid.js";
+export * from "./show.js";

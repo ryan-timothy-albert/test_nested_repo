@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 61baf600-f5ef-40e7-a8ac-60a427fe2b6e
 management:
-  docChecksum: b43789f53ff4554825b6fe08df64a802
+  docChecksum: d50249c9a535fe135343ae7e841ad7cd
   docVersion: 1.0.0
-  speakeasyVersion: 1.430.0
-  generationVersion: 2.449.0
-  releaseVersion: 0.3.2
-  configChecksum: 7acbe5de29dcfb371c5990627d0d3aac
+  speakeasyVersion: 1.440.2
+  generationVersion: 2.460.1
+  releaseVersion: 0.3.3
+  configChecksum: 430a5fc2a90b5f184c9f7032430ec64b
   repoURL: https://github.com/ryan-timothy-albert/test_nested_repo.git
   repoSubDirectory: package/sdk
   installationURL: https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package/sdk
@@ -14,7 +14,7 @@ management:
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.18.3
+    core: 3.18.5
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.1.2
@@ -41,8 +41,8 @@ generatedFiles:
   - docs/models/operations/listpetsrequest.md
   - docs/models/operations/listpetsresponse.md
   - docs/models/operations/listpetsresponseresult.md
-  - docs/models/operations/showpetbyidrequest.md
-  - docs/models/operations/showpetbyidresponse.md
+  - docs/models/operations/showrequest.md
+  - docs/models/operations/showresponse.md
   - docs/sdks/pets/README.md
   - docs/sdks/petstore/README.md
   - jsr.json
@@ -50,7 +50,7 @@ generatedFiles:
   - src/core.ts
   - src/funcs/petsCreatePets.ts
   - src/funcs/petsListPets.ts
-  - src/funcs/petsShowPetById.ts
+  - src/funcs/petsShow.ts
   - src/hooks/hooks.ts
   - src/hooks/index.ts
   - src/hooks/types.ts
@@ -79,7 +79,7 @@ generatedFiles:
   - src/models/errors/sdkvalidationerror.ts
   - src/models/operations/index.ts
   - src/models/operations/listpets.ts
-  - src/models/operations/showpetbyid.ts
+  - src/models/operations/show.ts
   - src/sdk/index.ts
   - src/sdk/pets.ts
   - src/sdk/sdk.ts
@@ -131,3 +131,13 @@ examples:
       responses:
         default:
           application/json: {"code": 606749, "message": "<value>"}
+  show:
+    speakeasy-default-show:
+      parameters:
+        path:
+          petId: "<id>"
+      responses:
+        "200":
+          application/json: {"id": 52777, "name": "<value>"}
+        default:
+          application/json: {"code": 283166, "message": "<value>"}
