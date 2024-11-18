@@ -87,7 +87,7 @@ run();
 
 * [listPets](docs/sdks/pets/README.md#listpets) - List all pets
 * [createPets](docs/sdks/pets/README.md#createpets) - Create a pet
-* [showPetById](docs/sdks/pets/README.md#showpetbyid) - Info for a specific pet
+* [show](docs/sdks/pets/README.md#show) - Info for a specific pet
 
 
 </details>
@@ -110,7 +110,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 - [`petsCreatePets`](docs/sdks/pets/README.md#createpets) - Create a pet
 - [`petsListPets`](docs/sdks/pets/README.md#listpets) - List all pets
-- [`petsShowPetById`](docs/sdks/pets/README.md#showpetbyid) - Info for a specific pet
+- [`petsShow`](docs/sdks/pets/README.md#show) - Info for a specific pet
 
 </details>
 <!-- End Standalone functions [standalone-funcs] -->
@@ -194,9 +194,9 @@ If a HTTP request fails, an operation my also throw an error from the `models/er
 
 In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `listPets` method may throw the following errors:
 
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
+| Error Type      | Status Code | Content Type |
+| --------------- | ----------- | ------------ |
+| errors.SDKError | 4XX, 5XX    | \*/\*        |
 
 ```typescript
 import { Petstore } from "ryan-total-test-act";
@@ -237,37 +237,9 @@ Validation errors can also occur when either method arguments or data returned f
 <!-- Start Server Selection [server] -->
 ## Server Selection
 
-### Select Server by Index
-
-You can override the default server globally by passing a server index to the `serverIdx` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
-
-| # | Server | Variables |
-| - | ------ | --------- |
-| 0 | `http://petstore.swagger.io/v1` | None |
-
-```typescript
-import { Petstore } from "ryan-total-test-act";
-
-const petstore = new Petstore({
-  serverIdx: 0,
-});
-
-async function run() {
-  const result = await petstore.pets.listPets({});
-
-  // Handle the result
-  console.log(result);
-}
-
-run();
-
-```
-
-
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
-
+The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { Petstore } from "ryan-total-test-act";
 
