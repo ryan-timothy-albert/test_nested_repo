@@ -7,7 +7,7 @@
 
 * [listPets](#listpets) - List all pets
 * [createPets](#createpets) - Create a pet
-* [showPetById](#showpetbyid) - Info for a specific pet
+* [show](#show) - Info for a specific pet
 
 ## listPets
 
@@ -151,7 +151,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## showPetById
+## show
 
 Info for a specific pet
 
@@ -163,7 +163,7 @@ import { Petstore } from "ryan-total-test-act";
 const petstore = new Petstore();
 
 async function run() {
-  const result = await petstore.pets.showPetById({
+  const result = await petstore.pets.show({
     petId: "<id>",
   });
 
@@ -180,14 +180,14 @@ The standalone function version of this method:
 
 ```typescript
 import { PetstoreCore } from "ryan-total-test-act/core.js";
-import { petsShowPetById } from "ryan-total-test-act/funcs/petsShowPetById.js";
+import { petsShow } from "ryan-total-test-act/funcs/petsShow.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const petstore = new PetstoreCore();
 
 async function run() {
-  const res = await petsShowPetById(petstore, {
+  const res = await petsShow(petstore, {
     petId: "<id>",
   });
 
@@ -208,14 +208,14 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.ShowPetByIdRequest](../../models/operations/showpetbyidrequest.md)                                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.ShowRequest](../../models/operations/showrequest.md)                                                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[operations.ShowPetByIdResponse](../../models/operations/showpetbyidresponse.md)\>**
+**Promise\<[operations.ShowResponse](../../models/operations/showresponse.md)\>**
 
 ### Errors
 
