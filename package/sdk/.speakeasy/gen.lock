@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 61baf600-f5ef-40e7-a8ac-60a427fe2b6e
 management:
-  docChecksum: d50249c9a535fe135343ae7e841ad7cd
+  docChecksum: 64625ca3fcb0fa0c7238e06f414255c5
   docVersion: 1.0.0
-  speakeasyVersion: 1.441.0
-  generationVersion: 2.460.1
-  releaseVersion: 0.3.8
-  configChecksum: c3d17da0a46dd2d99feb926aaacf2fb5
+  speakeasyVersion: 1.476.0
+  generationVersion: 2.496.0
+  releaseVersion: 0.4.0
+  configChecksum: 118fd6a5180085508f875c15324d7cc0
   repoURL: https://github.com/ryan-timothy-albert/test_nested_repo.git
   repoSubDirectory: package/sdk
   installationURL: https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package/sdk
@@ -14,7 +14,7 @@ management:
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.18.5
+    core: 3.18.18
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.1.2
@@ -23,7 +23,6 @@ features:
     responseFormat: 0.2.3
     retries: 2.83.0
     sdkHooks: 0.2.0
-    tests: 0.7.0
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
@@ -31,7 +30,6 @@ generatedFiles:
   - .eslintrc.cjs
   - .gitattributes
   - .npmignore
-  - CONTRIBUTING.md
   - FUNCTIONS.md
   - RUNTIMES.md
   - USAGE.md
@@ -48,8 +46,8 @@ generatedFiles:
   - jsr.json
   - package.json
   - src/core.ts
-  - src/funcs/petsCreatePets.ts
   - src/funcs/petsListPets.ts
+  - src/funcs/petsPetsMeep4.ts
   - src/funcs/petsShow.ts
   - src/hooks/hooks.ts
   - src/hooks/index.ts
@@ -97,40 +95,16 @@ examples:
     speakeasy-default-list-pets:
       responses:
         "200":
-          application/json: []
+          application/json: [{"id": 767425, "name": "<value>"}]
         default:
-          application/json: {"code": 767425, "message": "<value>"}
-  createPets:
-    speakeasy-default-create-pets:
+          application/json: {"code": 606271, "message": "<value>"}
+  PetsMeep4:
+    speakeasy-default-pets-meep4:
       requestBody:
-        application/json: {"id": 596804, "name": "<value>"}
+        application/json: {"id": 68264, "name": "<value>"}
       responses:
         default:
-          application/json: {"code": 589113, "message": "<value>"}
-  showPetById:
-    speakeasy-default-show-pet-by-id:
-      parameters:
-        path:
-          petId: "<id>"
-      responses:
-        "200":
-          application/json: {"id": 763078, "name": "<value>"}
-        default:
-          application/json: {"code": 743784, "message": "<value>"}
-  createPetsMe:
-    speakeasy-default-create-pets-me:
-      requestBody:
-        application/json: {"id": 413703, "name": "<value>"}
-      responses:
-        default:
-          application/json: {"code": 357040, "message": "<value>"}
-  createPETER:
-    speakeasy-default-create-PETER:
-      requestBody:
-        application/json: {"id": 434573, "name": "<value>"}
-      responses:
-        default:
-          application/json: {"code": 606749, "message": "<value>"}
+          application/json: {"code": 664404, "message": "<value>"}
   show:
     speakeasy-default-show:
       parameters:
@@ -141,3 +115,5 @@ examples:
           application/json: {"id": 52777, "name": "<value>"}
         default:
           application/json: {"code": 283166, "message": "<value>"}
+examplesVersion: 1.0.0
+generatedTests: {}

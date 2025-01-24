@@ -3,12 +3,13 @@
  */
 
 import { PetstoreCore } from "../core.js";
-import { encodeFormQuery } from "../lib/encodings.js";
+import { encodeJSON } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { pathToFunc } from "../lib/url.js";
+import * as components from "../models/components/index.js";
 import {
   ConnectionError,
   InvalidRequestError,
@@ -18,19 +19,18 @@ import {
 } from "../models/errors/httpclienterrors.js";
 import { SDKError } from "../models/errors/sdkerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
-import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
 /**
- * List all pets
+ * Create a pet
  */
-export async function petsListPets(
+export async function petsPetsMeep4(
   client: PetstoreCore,
-  request: operations.ListPetsRequest,
+  request: components.Pet,
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.ListPetsResponse,
+    components.ErrorT | undefined,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -42,27 +42,24 @@ export async function petsListPets(
 > {
   const parsed = safeParse(
     request,
-    (value) => operations.ListPetsRequest$outboundSchema.parse(value),
+    (value) => components.Pet$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
     return parsed;
   }
   const payload = parsed.value;
-  const body = null;
+  const body = encodeJSON("body", payload, { explode: true });
 
   const path = pathToFunc("/pets")();
 
-  const query = encodeFormQuery({
-    "limit": payload.limit,
-  });
-
   const headers = new Headers(compactMap({
+    "Content-Type": "application/json",
     Accept: "application/json",
   }));
 
   const context = {
-    operationID: "listPets",
+    operationID: "PetsMeep4",
     oAuth2Scopes: [],
 
     resolvedSecurity: null,
@@ -75,11 +72,10 @@ export async function petsListPets(
   };
 
   const requestRes = client._createRequest(context, {
-    method: "GET",
+    method: "POST",
     baseURL: options?.serverURL,
     path: path,
     headers: headers,
-    query: query,
     body: body,
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
@@ -99,12 +95,8 @@ export async function petsListPets(
   }
   const response = doResult.value;
 
-  const responseFields = {
-    HttpMeta: { Response: response, Request: req },
-  };
-
   const [result] = await M.match<
-    operations.ListPetsResponse,
+    components.ErrorT | undefined,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -113,16 +105,11 @@ export async function petsListPets(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.ListPetsResponse$inboundSchema, {
-      hdrs: true,
-      key: "Result",
-    }),
+    M.nil(201, components.ErrorT$inboundSchema.optional()),
     M.fail("4XX"),
     M.fail("5XX"),
-    M.json("default", operations.ListPetsResponse$inboundSchema, {
-      key: "Result",
-    }),
-  )(response, { extraFields: responseFields });
+    M.json("default", components.ErrorT$inboundSchema.optional()),
+  )(response);
   if (!result.ok) {
     return result;
   }
