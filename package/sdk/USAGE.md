@@ -1,11 +1,11 @@
 <!-- Start SDK Example Usage [usage] -->
 ```typescript
-import { Petstore } from "ryan-total-test-act";
+import { Pets } from "ryan-total-test-act";
 
-const petstore = new Petstore();
+const pets = new Pets();
 
 async function run() {
-  const result = await petstore.pets.listPets({});
+  const result = await pets.pets.listPets({});
 
   // Handle the result
   console.log(result);
