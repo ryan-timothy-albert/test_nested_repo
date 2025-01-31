@@ -3,7 +3,7 @@ generation:
   devContainers:
     enabled: true
     schemaPath: https://example.com/OVERWRITE_WHEN_SAMPLE_SPEC_IS_WRITTEN
-  sdkClassName: Petstore
+  sdkClassName: Pets
   maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
