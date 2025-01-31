@@ -18,3 +18,4 @@ targets:
             registry:
                 location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas123-code-samples
             blocking: false
+            output: codeSamples.yaml
