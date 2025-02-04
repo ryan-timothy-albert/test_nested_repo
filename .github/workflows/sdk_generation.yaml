@@ -16,7 +16,7 @@ permissions:
         type: string
   # schedule:
   #   - cron: 0 0 * * *
-  push:
+  pull_request:
     paths:
       - openapi.yaml
     branches-ignore:
