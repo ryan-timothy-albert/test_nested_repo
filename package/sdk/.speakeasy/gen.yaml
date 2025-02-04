@@ -3,7 +3,7 @@ generation:
   devContainers:
     enabled: true
     schemaPath: https://example.com/OVERWRITE_WHEN_SAMPLE_SPEC_IS_WRITTEN
-  sdkClassName: Petstore
+  sdkClassName: Pets
   maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
@@ -16,7 +16,7 @@ generation:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: false
 typescript:
-  version: 0.3.8
+  version: 0.4.0
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -25,6 +25,8 @@ typescript:
   author: ryan-timothy-albert
   clientServerStatusCodesAsErrors: true
   defaultErrorName: SDKError
+  enableCustomCodeRegions: false
+  enableReactQuery: false
   enumFormat: union
   flattenGlobalSecurity: true
   flatteningOrder: body-first

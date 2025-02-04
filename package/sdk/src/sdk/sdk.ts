@@ -3,11 +3,11 @@
  */
 
 import { ClientSDK } from "../lib/sdks.js";
-import { Pets } from "./pets.js";
+import { PetsSDK } from "./petssdk.js";
 
-export class Petstore extends ClientSDK {
-  private _pets?: Pets;
-  get pets(): Pets {
-    return (this._pets ??= new Pets(this._options));
+export class Pets extends ClientSDK {
+  private _petsSDK?: PetsSDK;
+  get petsSDK(): PetsSDK {
+    return (this._petsSDK ??= new PetsSDK(this._options));
   }
 }
