@@ -43,7 +43,7 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       summary: Create a pet
-      operationId: PetTest90324
+      operationId: PetTest90324ewrewrew
       tags:
         - pets
       requestBody:
