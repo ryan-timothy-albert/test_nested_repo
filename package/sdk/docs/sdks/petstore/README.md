@@ -1,3 +1,0 @@
-# Petstore SDK
-
-## Overview

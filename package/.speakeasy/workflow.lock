@@ -1,20 +1,21 @@
-speakeasyVersion: 1.441.0
+speakeasyVersion: 1.481.1
 sources:
     petstore-oas:
-        sourceNamespace: petstore-oas123
-        sourceRevisionDigest: sha256:1cb03f51d6ee7ab2f1f431eee654846861c95ce007fc3a8ba730eed74e36c153
-        sourceBlobDigest: sha256:6bf7eefece96c3d54715800dc08941a5dca9ec60d73637f8771f979a591923f1
+        sourceNamespace: petstore-oas-123
+        sourceRevisionDigest: sha256:21f12484f0bdcb15c79224e1156cac6eb9771bea48d064cc376ad00600aae22c
+        sourceBlobDigest: sha256:a29db689073582f42464912a184bb649437aa3faa49a7cb054dc807a521c22d7
         tags:
             - latest
-            - speakeasy-sdk-regen-1731975349
+            - speakeasy-sdk-regen-1737759188
+            - 1.0.0
 targets:
     petstore:
         source: petstore-oas
-        sourceNamespace: petstore-oas123
-        sourceRevisionDigest: sha256:1cb03f51d6ee7ab2f1f431eee654846861c95ce007fc3a8ba730eed74e36c153
-        sourceBlobDigest: sha256:6bf7eefece96c3d54715800dc08941a5dca9ec60d73637f8771f979a591923f1
-        codeSamplesNamespace: petstore-oas123-code-samples
-        codeSamplesRevisionDigest: sha256:4d46913e508afa87f4212386e0f9938d7b3213553246c7bbb1d490118191ffd9
+        sourceNamespace: petstore-oas-123
+        sourceRevisionDigest: sha256:21f12484f0bdcb15c79224e1156cac6eb9771bea48d064cc376ad00600aae22c
+        sourceBlobDigest: sha256:a29db689073582f42464912a184bb649437aa3faa49a7cb054dc807a521c22d7
+        codeSamplesNamespace: petstore-oas123-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:3dbe0bc31e81286c719c75e7dd1a3431088bf2cebcd5b73151e2713758e39a7d
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -23,7 +24,7 @@ workflow:
             inputs:
                 - location: ../openapi.yaml
             registry:
-                location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas123
+                location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas-123
     targets:
         petstore:
             target: typescript
@@ -33,6 +34,7 @@ workflow:
                 npm:
                     token: $npm_token
             codeSamples:
+                output: codeSamples.yaml
                 registry:
-                    location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas123-code-samples
+                    location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas123-typescript-code-samples
                 blocking: false
