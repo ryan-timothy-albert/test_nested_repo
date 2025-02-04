@@ -24,7 +24,7 @@ import { Result } from "../types/fp.js";
 /**
  * Create a pet
  */
-export async function petsPetsTest(
+export async function petsPetTest90324ewrewrew(
   client: PetsCore,
   request: components.Pet,
   options?: RequestOptions,
@@ -59,7 +59,7 @@ export async function petsPetsTest(
   }));
 
   const context = {
-    operationID: "PetsTest",
+    operationID: "PetTest90324ewrewrew",
     oAuth2Scopes: [],
 
     resolvedSecurity: null,

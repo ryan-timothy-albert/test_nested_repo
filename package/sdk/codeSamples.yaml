@@ -25,15 +25,15 @@ actions:
     update:
       x-codeSamples:
         - lang: typescript
-          label: PetsTest
+          label: PetTest90324ewrewrew
           source: |-
             import { Pets } from "ryan-total-test-act";
 
             const pets = new Pets();
 
             async function run() {
-              const result = await pets.pets.petsTest({
-                id: 542443,
+              const result = await pets.pets.petTest90324ewrewrew({
+                id: 841329,
                 name: "<value>",
               });
 

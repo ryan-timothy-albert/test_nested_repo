@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 61baf600-f5ef-40e7-a8ac-60a427fe2b6e
 management:
-  docChecksum: 49f0f39c5dee356c2ee5108cf3bf0876
+  docChecksum: 9b70cac50d95fea170bb4d05e79dfee3
   docVersion: 1.0.0
-  speakeasyVersion: 1.481.1
-  generationVersion: 2.500.5
-  releaseVersion: 0.4.0
-  configChecksum: 2ac418c4025e1c6a6d55cd871993a4a9
+  speakeasyVersion: 1.483.0
+  generationVersion: 2.502.0
+  releaseVersion: 0.4.1
+  configChecksum: e57f92914cc3cd58eb9bc3a060e7e33f
   repoURL: https://github.com/ryan-timothy-albert/test_nested_repo.git
   repoSubDirectory: package/sdk
   installationURL: https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package/sdk
@@ -47,7 +47,7 @@ generatedFiles:
   - package.json
   - src/core.ts
   - src/funcs/petsListPets.ts
-  - src/funcs/petsPetsTest.ts
+  - src/funcs/petsPetTest90324ewrewrew.ts
   - src/funcs/petsShow.ts
   - src/hooks/hooks.ts
   - src/hooks/index.ts
@@ -115,5 +115,12 @@ examples:
           application/json: {"id": 52777, "name": "<value>"}
         default:
           application/json: {"code": 283166, "message": "<value>"}
+  PetTest90324ewrewrew:
+    speakeasy-default-pet-test90324ewrewrew:
+      requestBody:
+        application/json: {"id": 841329, "name": "<value>"}
+      responses:
+        default:
+          application/json: {"code": 115626, "message": "<value>"}
 examplesVersion: 1.0.0
 generatedTests: {}
