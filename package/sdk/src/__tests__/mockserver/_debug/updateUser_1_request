@@ -1,0 +1,16 @@
+PUT /user/Dandre_Hand41 HTTP/1.1
+Host: localhost:18080
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: *
+Api_key: <YOUR_API_KEY_HERE>
+Connection: keep-alive
+Content-Length: 143
+Content-Type: application/json
+Cookie: 
+Sec-Fetch-Mode: cors
+User-Agent: speakeasy-sdk/typescript 0.5.1 2.512.4 4.0.0 ryan-total-test-act
+X-Speakeasy-Test-Instance-Id: 1F78610D-073F-D5FA-7CC7-A25EC2B9DD03
+X-Speakeasy-Test-Name: updateUser
+
+{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}

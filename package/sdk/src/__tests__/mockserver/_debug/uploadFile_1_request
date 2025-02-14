@@ -1,0 +1,15 @@
+POST /pet/565380/uploadImage HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Accept-Language: *
+Api_key: <YOUR_API_KEY_HERE>
+Connection: keep-alive
+Content-Length: 0
+Content-Type: application/octet-stream
+Cookie: 
+Sec-Fetch-Mode: cors
+User-Agent: speakeasy-sdk/typescript 0.5.1 2.512.4 4.0.0 ryan-total-test-act
+X-Speakeasy-Test-Instance-Id: BFB189D3-E616-1265-7CF1-576F6DF0958D
+X-Speakeasy-Test-Name: uploadFile
+

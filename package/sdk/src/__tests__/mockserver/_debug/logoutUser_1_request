@@ -1,0 +1,13 @@
+GET /user/logout HTTP/1.1
+Host: localhost:18080
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: *
+Api_key: <YOUR_API_KEY_HERE>
+Connection: keep-alive
+Cookie: 
+Sec-Fetch-Mode: cors
+User-Agent: speakeasy-sdk/typescript 0.5.1 2.512.4 4.0.0 ryan-total-test-act
+X-Speakeasy-Test-Instance-Id: 6253EDFD-FDF3-3763-F0D5-4D8DE3B9A2AF
+X-Speakeasy-Test-Name: logoutUser
+

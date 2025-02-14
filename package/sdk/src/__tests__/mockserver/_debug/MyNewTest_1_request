@@ -1,0 +1,16 @@
+POST /pet HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Accept-Language: *
+Api_key: <YOUR_API_KEY_HERE>
+Connection: keep-alive
+Content-Length: 93
+Content-Type: application/json
+Cookie: 
+Sec-Fetch-Mode: cors
+User-Agent: speakeasy-sdk/typescript 0.5.1 2.512.4 4.0.0 ryan-total-test-act
+X-Speakeasy-Test-Instance-Id: 77B61061-90E6-1D74-6B70-27B6A629C5BA
+X-Speakeasy-Test-Name: MyNewTest
+
+{"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["<value>","<value>"]}
