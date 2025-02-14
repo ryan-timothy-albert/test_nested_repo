@@ -5,8 +5,8 @@ management:
   docVersion: 4.0.0
   speakeasyVersion: 1.492.0
   generationVersion: 2.512.4
-  releaseVersion: 0.5.1
-  configChecksum: 242a054bb06f5b377d177a78aa1216e8
+  releaseVersion: 0.5.2
+  configChecksum: ca69d86601c7a8bff5cd0de390604a44
   repoURL: https://github.com/ryan-timothy-albert/test_nested_repo.git
   repoSubDirectory: package/sdk
   installationURL: https://gitpkg.now.sh/ryan-timothy-albert/test_nested_repo/package/sdk
