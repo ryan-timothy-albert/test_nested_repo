@@ -6,7 +6,7 @@
 ### Available Operations
 
 * [listPets](#listpets) - List all pets
-* [petsTest](#petstest) - Create a pet
+* [petTest90324ewrewrew](#pettest90324ewrewrew) - Create a pet
 * [show](#show) - Info for a specific pet
 
 ## listPets
@@ -77,7 +77,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## petsTest
+## petTest90324ewrewrew
 
 Create a pet
 
@@ -89,8 +89,8 @@ import { Pets } from "ryan-total-test-act";
 const pets = new Pets();
 
 async function run() {
-  const result = await pets.pets.petsTest({
-    id: 542443,
+  const result = await pets.pets.petTest90324ewrewrew({
+    id: 841329,
     name: "<value>",
   });
 
@@ -107,15 +107,15 @@ The standalone function version of this method:
 
 ```typescript
 import { PetsCore } from "ryan-total-test-act/core.js";
-import { petsPetsTest } from "ryan-total-test-act/funcs/petsPetsTest.js";
+import { petsPetTest90324ewrewrew } from "ryan-total-test-act/funcs/petsPetTest90324ewrewrew.js";
 
 // Use `PetsCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const pets = new PetsCore();
 
 async function run() {
-  const res = await petsPetsTest(pets, {
-    id: 542443,
+  const res = await petsPetTest90324ewrewrew(pets, {
+    id: 841329,
     name: "<value>",
   });
 

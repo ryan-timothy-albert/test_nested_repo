@@ -3,7 +3,7 @@
  */
 
 import { petsListPets } from "../funcs/petsListPets.js";
-import { petsPetsTest } from "../funcs/petsPetsTest.js";
+import { petsPetTest90324ewrewrew } from "../funcs/petsPetTest90324ewrewrew.js";
 import { petsShow } from "../funcs/petsShow.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
@@ -28,11 +28,11 @@ export class PetsSDK extends ClientSDK {
   /**
    * Create a pet
    */
-  async petsTest(
+  async petTest90324ewrewrew(
     request: components.Pet,
     options?: RequestOptions,
   ): Promise<components.ErrorT | undefined> {
-    return unwrapAsync(petsPetsTest(
+    return unwrapAsync(petsPetTest90324ewrewrew(
       this,
       request,
       options,

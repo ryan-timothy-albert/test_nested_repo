@@ -19,3 +19,5 @@ targets:
             registry:
                 location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas123-typescript-code-samples
             blocking: false
+        testing:
+            enabled: true

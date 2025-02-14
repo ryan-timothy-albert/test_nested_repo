@@ -1,0 +1,58 @@
+arazzo: 1.0.0
+info:
+  title: Test Suite
+  summary: Created from ../openapi.yaml
+  version: 0.0.1
+sourceDescriptions:
+  - name: ../openapi.yaml
+    url: https://TBD.com
+    type: openapi
+workflows:
+  - workflowId: listPets
+    steps:
+      - stepId: test
+        operationId: listPets
+        successCriteria:
+          - condition: $statusCode == 200
+          - condition: $response.header.Content-Type == application/json
+          - context: $response.body
+            condition: |
+              [
+                {
+                  "id": 767425,
+                  "name": "\u003cvalue\u003e"
+                }
+              ]
+            type: simple
+    x-speakeasy-test-group: pets_SDK
+  - workflowId: PetTest90324ewrewrew
+    steps:
+      - stepId: test
+        operationId: PetTest90324ewrewrew
+        requestBody:
+          contentType: application/json
+          payload:
+            id: 841329
+            name: <value>
+        successCriteria:
+          - condition: $statusCode == 201
+    x-speakeasy-test-group: pets_SDK
+  - workflowId: show
+    steps:
+      - stepId: test
+        operationId: show
+        parameters:
+          - name: petId
+            in: path
+            value: <id>
+        successCriteria:
+          - condition: $statusCode == 200
+          - condition: $response.header.Content-Type == application/json
+          - context: $response.body
+            condition: |
+              {
+                "id": 52777,
+                "name": "\u003cvalue\u003e"
+              }
+            type: simple
+    x-speakeasy-test-group: pets_SDK
