@@ -3,38 +3,30 @@ info:
   title: CodeSamples overlay for typescript target
   version: 0.0.0
 actions:
-  - target: $["paths"]["/pets"]["get"]
+  - target: $["paths"]["/pet"]["post"]
     update:
       x-codeSamples:
         - lang: typescript
-          label: listPets
+          label: MyNewTest
           source: |-
             import { Pets } from "ryan-total-test-act";
 
-            const pets = new Pets();
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
 
             async function run() {
-              const result = await pets.pets.listPets({});
-
-              // Handle the result
-              console.log(result);
-            }
-
-            run();
-  - target: $["paths"]["/pets"]["post"]
-    update:
-      x-codeSamples:
-        - lang: typescript
-          label: PetTest90324ewrewrew
-          source: |-
-            import { Pets } from "ryan-total-test-act";
-
-            const pets = new Pets();
-
-            async function run() {
-              const result = await pets.pets.petTest90324ewrewrew({
-                id: 841329,
-                name: "<value>",
+              const result = await pets.pet.myNewTest({
+                id: 10,
+                name: "doggie",
+                category: {
+                  id: 1,
+                  name: "Dogs",
+                },
+                photoUrls: [
+                  "<value>",
+                  "<value>",
+                ],
               });
 
               // Handle the result
@@ -42,23 +34,402 @@ actions:
             }
 
             run();
-  - target: $["paths"]["/pets/{petId}"]["get"]
+  - target: $["paths"]["/pet"]["put"]
     update:
       x-codeSamples:
         - lang: typescript
-          label: show
+          label: petsStoreMonday
           source: |-
             import { Pets } from "ryan-total-test-act";
 
-            const pets = new Pets();
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
 
             async function run() {
-              const result = await pets.pets.show({
-                petId: "<id>",
+              const result = await pets.pet.petsStoreMonday({
+                id: 10,
+                name: "doggie",
+                category: {
+                  id: 1,
+                  name: "Dogs",
+                },
+                photoUrls: [
+                  "<value>",
+                ],
               });
 
               // Handle the result
               console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/pet/findByStatus"]["get"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: findPetsByStatusTypes
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.pet.findPetsByStatusTypes({});
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/pet/findByTags"]["get"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: findPetsByTags
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.pet.findPetsByTags({});
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/pet/{petId}"]["delete"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: deletePet
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.pet.deletePet({
+                petId: 441876,
+              });
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/pet/{petId}"]["get"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: getPetByIDS
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.pet.getPetByIDS({
+                petId: 137396,
+              });
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/pet/{petId}/uploadImage"]["post"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: uploadFile
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.pet.uploadFile({
+                petId: 565380,
+              });
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/store/inventory"]["get"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: getInventory
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.store.getInventory();
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/store/order"]["post"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: placeOrder
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.store.placeOrder({
+                id: 10,
+                petId: 198772,
+                quantity: 7,
+                status: "approved",
+              });
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/store/order/{orderId}"]["delete"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: deleteOrder
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.store.deleteOrder({
+                orderId: 127902,
+              });
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/store/order/{orderId}"]["get"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: getOrderById
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.store.getOrderById({
+                orderId: 614993,
+              });
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/user"]["post"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: createUser
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.user.createUser({
+                id: 10,
+                username: "theUser",
+                firstName: "John",
+                lastName: "James",
+                email: "john@email.com",
+                password: "12345",
+                phone: "12345",
+                userStatus: 1,
+              });
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/user/createWithList"]["post"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: createUsersWithListInput
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.user.createUsersWithListInput([
+                {
+                  id: 10,
+                  username: "theUser",
+                  firstName: "John",
+                  lastName: "James",
+                  email: "john@email.com",
+                  password: "12345",
+                  phone: "12345",
+                  userStatus: 1,
+                },
+              ]);
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/user/login"]["get"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: loginUser
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.user.loginUser({});
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/user/logout"]["get"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: logoutUser
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              await pets.user.logoutUser();
+
+
+            }
+
+            run();
+  - target: $["paths"]["/user/{username}"]["delete"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: deleteUser
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.user.deleteUser({
+                username: "Demetris_Schmitt",
+              });
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/user/{username}"]["get"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: getUserByName
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              const result = await pets.user.getUserByName({
+                username: "Zachery_Lubowitz15",
+              });
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+  - target: $["paths"]["/user/{username}"]["put"]
+    update:
+      x-codeSamples:
+        - lang: typescript
+          label: updateUser
+          source: |-
+            import { Pets } from "ryan-total-test-act";
+
+            const pets = new Pets({
+              apiKey: "<YOUR_API_KEY_HERE>",
+            });
+
+            async function run() {
+              await pets.user.updateUser({
+                username: "Dandre_Hand41",
+                user: {
+                  id: 10,
+                  username: "theUser",
+                  firstName: "John",
+                  lastName: "James",
+                  email: "john@email.com",
+                  password: "12345",
+                  phone: "12345",
+                  userStatus: 1,
+                },
+              });
+
+
             }
 
             run();

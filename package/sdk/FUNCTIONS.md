@@ -20,15 +20,27 @@ specific category of applications.
 
 ```typescript
 import { PetsCore } from "ryan-total-test-act/core.js";
-import { petsListPets } from "ryan-total-test-act/funcs/petsListPets.js";
+import { petPetsStoreMonday } from "ryan-total-test-act/funcs/petPetsStoreMonday.js";
 import { SDKValidationError } from "ryan-total-test-act/models/errors/sdkvalidationerror.js";
 
 // Use `PetsCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const pets = new PetsCore();
+const pets = new PetsCore({
+  apiKey: "<YOUR_API_KEY_HERE>",
+});
 
 async function run() {
-  const res = await petsListPets(pets, {});
+  const res = await petPetsStoreMonday(pets, {
+    id: 10,
+    name: "doggie",
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    photoUrls: [
+      "<value>",
+    ],
+  });
 
   switch (true) {
     case res.ok:
