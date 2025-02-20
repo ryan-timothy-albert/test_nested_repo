@@ -38,15 +38,15 @@ export type SDKOptions = {
   /**
    * Allows overriding the default server used by the SDK
    */
-  serverIdx?: number;
+  serverIdx?: number | undefined;
   /**
    * Sets the environment variable for url substitution
    */
-  environment?: ServerEnvironment;
+  environment?: ServerEnvironment | undefined;
   /**
    * Allows overriding the default server URL used by the SDK
    */
-  serverURL?: string;
+  serverURL?: string | undefined;
   /**
    * Allows overriding the default retry config used by the SDK
    */
@@ -81,7 +81,7 @@ export function serverURLFromOptions(options: SDKOptions): URL | null {
 export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "4.0.0",
-  sdkVersion: "0.5.1",
-  genVersion: "2.512.4",
-  userAgent: "speakeasy-sdk/typescript 0.5.1 2.512.4 4.0.0 ryan-total-test-act",
+  sdkVersion: "0.6.0",
+  genVersion: "2.518.0",
+  userAgent: "speakeasy-sdk/typescript 0.6.0 2.518.0 4.0.0 ryan-total-test-act",
 } as const;
